@@ -1,0 +1,32 @@
+<section class="bg-light">
+        <form class="container my-4" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <h1 class="p-2">Login</h1>
+            <section class="row mb-2">
+                <section class="col p-1">
+                    <label class="col-2 col-form-label" for="">Usuario: </label>
+                        <section class="col-2">
+                        <input type="text" #txtuser class="user form-control" formControlName="user">
+                        </section>        
+                </section>
+            </section>
+            <section class="row">
+                <section class="col p-2">
+                    <label class="col-2 col-form-label" for="">Password: </label>
+                    <section class="col-2">
+                        <input type="password" #password class="password form-control" formControlName="password">
+                    </section>
+                    
+                </section>
+            </section>
+            <!-- <button class="boton rounded border-primary bg-white text-primary" (click)="validar(txt.user.value)>login</button> -->
+            
+            <input class="btn btn-outline-info d-inline" type="submit" value="Enviar">
+            <!-- <input type="button" value="Login" class="btn btn-outline-info"> -->
+            <ul *ngIf="resultado == true;else falso">
+                <app-bienvenida></app-bienvenida>
+            </ul>
+            <ng-template #falso>
+               <p class="color">{{ mensaje }}</p>
+            </ng-template>
+        </form> 
+</section>
