@@ -1,0 +1,21 @@
+<form>
+    <section>
+        <label for="">Numero 1: </label>
+        <input type="number" [(ngModel)]="number1" name="number1" class="form-control">
+    </section>
+    <section>
+        <label for="">Numero 2: </label>
+        <input type="number" [(ngModel)]="number2" name="number2" class="form-control">
+        
+    </section>
+    <section>
+        <label for="">Operacion: </label>
+        <select name="eperation" [(ngModel)]="operation"  (change)="calcular()" class="form-control">
+            <option value="">Seleccione</option>
+            <option *ngFor="let ope of operations" [ngValue]="ope" >{{ope}}</option>
+        </select>
+    </section>
+    <section>
+        <h3>Resultado: {{response  }}</h3>
+    </section>
+</form>
