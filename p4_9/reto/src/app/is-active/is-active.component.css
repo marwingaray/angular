@@ -1,0 +1,7 @@
+.contenedor{width: 400px; display: flex;
+    justify-content: center; flex-flow: column nowrap; 
+    padding: 1rem; border: solid; border-radius: 10px;
+    height: 587px; }
+.contenedor>*{
+    width: 400px;
+}
