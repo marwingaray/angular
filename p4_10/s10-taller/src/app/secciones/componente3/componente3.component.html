@@ -1,0 +1,44 @@
+<!-- <form action="">
+    <section class="container my-4">
+        <input type="text" placeholder="Ingresa el nombre de la tarea" class="form-control my-4">
+        <textarea type="text" placeholder="Ingresa descripción de la tarea" class="form-control my-4" rows="3"></textarea>
+        <input type="button" class="btn btn-primary" value="Guardar">
+    </section>
+</form>
+
+<section class="container">
+    <h3>Lista de Tareas</h3>
+    <ul>
+        <li>Prueba</li>
+    </ul>
+</section> -->
+
+
+<form class="container py-5 h-100">
+    <section class="row d-flex  align-items-center h-100">
+            <section class="col-6 col-md-8 col-lg-6 col-xl-5">
+            <section class="card shadow-2-strong" style="border-radius: 1rem">
+                <section class="card-body p-5 text-center">
+                <h3 class="mb-5">Ingresar</h3>
+                <section class="form-outline mb-4">
+                    <input class="form-control form-control-lg" placeholder="Ingresa nombre tarea" type="text" [(ngModel)]="tarea" name="tarea" (input)="change()"/>
+                </section>
+                <section class="form-outline mb-4">
+                    <textarea class="form-control form-control-lg" placeholder="Ingresa Descripción" type="text" rows="3" [(ngModel)]="txttarea" name="txtTarea" (input)="change()"></textarea>
+                </section>
+                <section class="pt-1 mb-4">
+                    <input [disabled]="disable ? true : null" class="btn btn-primary btn-lg" type="button" value="Guardar" (click)="AgregarTarea()"/>
+                </section>
+            </section>
+        </section>
+        </section>
+        <section class="col-6 col-md-8 col-lg-6 col-xl-5">
+            <ul *ngFor="let lista of datos; let i = index" class="accordion">
+                <li >{{i+1}}-{{ lista.Tarea }}</li>
+                    <ul>
+                        <li>{{lista.TxtTarea}}</li>
+                    </ul>
+            </ul>
+        </section>
+    </section>
+</form>
